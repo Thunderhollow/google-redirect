@@ -1,0 +1,40 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Redirect</title>
+  <script>
+    // Define an array of links
+    const links = [
+      "https://forms.gle/6wEA4zfj6fCWdKJH8",
+      "https://forms.gle/cyjcrEsXaohUjUKb6",
+      "https://forms.gle/YUM63jonv7YgSjnL8",
+      "https://forms.gle/E6WJVZGwZSXtoWRM6",
+      "https://forms.gle/zbg5vJyzk3UyUGou5",
+      "https://forms.gle/GAq8zAA9G5fSGszX6",
+      "https://forms.gle/4c9wyskSoWeHYttP9",
+      "https://forms.gle/dPBSsodYWq5kP2Xh6",
+      "https://forms.gle/J6kR85sAtpN16mtBA",
+      "https://forms.gle/z38vUWa63graA6Zh8"
+    ];
+
+    // Function to pick a random link and redirect
+    function redirectRandomly() {
+      const randomIndex = Math.floor(Math.random() * links.length);
+      window.location.href = links[randomIndex];
+    }
+
+    // Run the function when the page loads
+    window.onload = redirectRandomly;
+  </script>
+</head>
+<body>
+  <p>If you are not redirected automatically, <a id="manualLink" href="#">click here</a>.</p>
+  <script>
+    // Set a manual link (optional)
+    const randomLink = links[Math.floor(Math.random() * links.length)];
+    document.getElementById("manualLink").href = randomLink;
+  </script>
+</body>
+</html>
